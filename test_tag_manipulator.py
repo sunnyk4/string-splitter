@@ -40,6 +40,35 @@ def test_split_one_string_result_array_of_two():
     # assert
     assert result == expResult
 
+def test_strip_string_spaces_before_after():
+    # arrange
+    stringToSplit = " java "
+    regex = ","
+    expResult = ["java"]
+    result = None
+    cut = TagManipulator()
+
+    # act
+    result = cut.parse_string(stringToSplit, regex)
+
+    # assert
+    assert result == expResult
+
+def test_strip_string_commas_before_after():
+    # arrange
+    stringToSplit = ",java"
+    regex = ","
+    expResult = ["java"]
+    result = None
+    cut = TagManipulator()
+
+    # act
+    result = cut.parse_string(stringToSplit, regex)
+
+    # assert
+    assert result == expResult
+
+
 
 
 
